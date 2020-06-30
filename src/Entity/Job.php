@@ -95,24 +95,17 @@ class Job
         $this->updated_at = new DateTime();
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
     /**
-     * @param string $description
      * @return $this
      */
     public function setDescription(string $description): self
@@ -122,16 +115,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getRequirements(): ?string
     {
         return $this->requirements;
     }
 
     /**
-     * @param string $requirements
      * @return $this
      */
     public function setRequirements(string $requirements): self
@@ -141,16 +130,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getContact(): ?string
     {
         return $this->contact;
     }
 
     /**
-     * @param string $contact
      * @return $this
      */
     public function setContact(string $contact): self
@@ -160,16 +145,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return User|null
-     */
     public function getOwner(): ?User
     {
         return $this->owner;
     }
 
     /**
-     * @param User|null $owner
      * @return $this
      */
     public function setOwner(?User $owner): self
@@ -179,16 +160,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string $title
      * @return $this
      */
     public function setTitle(string $title): self
@@ -198,16 +175,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
     public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->created_at;
     }
 
     /**
-     * @param DateTimeInterface $created_at
      * @return $this
      */
     public function setCreatedAt(DateTimeInterface $created_at): self
@@ -217,16 +190,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getActive(): ?bool
     {
         return $this->active;
     }
 
     /**
-     * @param bool $active
      * @return $this
      */
     public function setActive(bool $active): self
@@ -236,16 +205,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
     public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updated_at;
     }
 
     /**
-     * @param DateTimeInterface $updated_at
      * @return $this
      */
     public function setUpdatedAt(DateTimeInterface $updated_at): self
@@ -255,16 +220,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getApplicationUrl(): ?string
     {
         return $this->application_url;
     }
 
     /**
-     * @param string|null $application_url
      * @return $this
      */
     public function setApplicationUrl(?string $application_url): self
@@ -274,24 +235,17 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->title;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCompany(): ?string
     {
         return $this->company;
     }
 
     /**
-     * @param string $company
      * @return $this
      */
     public function setCompany(string $company): self
@@ -301,16 +255,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPhone(): ?string
     {
         return $this->phone;
     }
 
     /**
-     * @param string $phone
      * @return $this
      */
     public function setPhone(string $phone): self
@@ -320,16 +270,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
     /**
-     * @param string $email
      * @return $this
      */
     public function setEmail(string $email): self
@@ -339,16 +285,12 @@ class Job
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSalary(): ?string
     {
         return $this->salary;
     }
 
     /**
-     * @param string|null $salary
      * @return $this
      */
     public function setSalary(?string $salary): self

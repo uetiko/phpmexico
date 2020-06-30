@@ -48,24 +48,17 @@ class Contact
         $this->created_at = new DateTime('now');
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return User|null
-     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
     /**
-     * @param User|null $user
      * @return $this
      */
     public function setUser(?User $user): self
@@ -75,16 +68,12 @@ class Contact
         return $this;
     }
 
-    /**
-     * @return User|null
-     */
     public function getDeveloper(): ?User
     {
         return $this->developer;
     }
 
     /**
-     * @param User|null $developer
      * @return $this
      */
     public function setDeveloper(?User $developer): self
@@ -94,16 +83,12 @@ class Contact
         return $this;
     }
 
-    /**
-     * @return Job|null
-     */
     public function getJob(): ?Job
     {
         return $this->job;
     }
 
     /**
-     * @param Job|null $job
      * @return $this
      */
     public function setJob(?Job $job): self
@@ -113,24 +98,17 @@ class Contact
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return (string) $this->user.' -> '.$this->developer;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
     public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->created_at;
     }
 
     /**
-     * @param DateTimeInterface $created_at
      * @return $this
      */
     public function setCreatedAt(DateTimeInterface $created_at): self

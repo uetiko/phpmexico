@@ -23,7 +23,6 @@ class ProfileRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param Skill $skill
      * @return int|mixed|string
      */
     public function findBySkill(Skill $skill)

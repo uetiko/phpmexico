@@ -9,25 +9,23 @@ use App\Entity\Job;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Doctrine\ORM\Events;
-use Twig\Environment;
 use Swift_Mailer;
 use Swift_Message;
-use \Twig\Error\LoaderError;
-use \Twig\Error\RuntimeError;
-use \Twig\Error\SyntaxError;
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 class SendContactEmail implements EventSubscriber
 {
-    /** @var Swift_Mailer $mailer */
+    /** @var Swift_Mailer */
     protected $mailer;
 
-    /** @var Environment $twig */
+    /** @var Environment */
     protected $twig;
 
     /**
      * SendContactEmail constructor.
-     * @param Swift_Mailer $mailer
-     * @param Environment $twig
      */
     public function __construct(Swift_Mailer $mailer, Environment $twig)
     {
@@ -45,9 +43,6 @@ class SendContactEmail implements EventSubscriber
         ];
     }
 
-    /**
-     * @param LifecycleEventArgs $args
-     */
     public function postPersist(LifecycleEventArgs $args)
     {
         /** @var Contact $user */
@@ -66,10 +61,6 @@ class SendContactEmail implements EventSubscriber
     }
 
     /**
-     * @param string $email
-     * @param string $replay
-     * @param Job $job
-     * @return Swift_Message
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError

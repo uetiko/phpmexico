@@ -23,7 +23,6 @@ class JobRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param User $user
      * @return int|mixed|string
      */
     public function findOwnJobPost(User $user)

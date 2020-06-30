@@ -23,9 +23,6 @@ class PhpmxSlackChannelsCommand extends Command
         parent::__construct();
     }
 
-    /**
-     * @return void
-     */
     protected function configure(): void
     {
         $this
@@ -33,11 +30,6 @@ class PhpmxSlackChannelsCommand extends Command
         ;
     }
 
-    /**
-     * @param InputInterface $input
-     * @param OutputInterface $output
-     * @return void
-     */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
         $io = new SymfonyStyle($input, $output);

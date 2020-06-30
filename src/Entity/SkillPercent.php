@@ -28,24 +28,17 @@ class SkillPercent
      */
     private $percent = 0;
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return Skill|null
-     */
     public function getSkill(): ?Skill
     {
         return $this->skill;
     }
 
     /**
-     * @param Skill|null $skill
      * @return $this
      */
     public function setSkill(?Skill $skill): self
@@ -55,16 +48,12 @@ class SkillPercent
         return $this;
     }
 
-    /**
-     * @return float|null
-     */
     public function getPercent(): ?float
     {
         return $this->percent;
     }
 
     /**
-     * @param float $percent
      * @return $this
      */
     public function setPercent(float $percent): self
@@ -74,9 +63,6 @@ class SkillPercent
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return (string) $this->percent;

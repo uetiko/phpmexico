@@ -61,24 +61,17 @@ class Profile
         $this->skills = new ArrayCollection();
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
      * @return $this
      */
     public function setName(string $name): self
@@ -88,17 +81,14 @@ class Profile
         return $this;
     }
 
-    /**
-     * @return User|null
-     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
     /**
-     * Set (or unset) the owning side of the relation if necessary
-     * @param User|null $user
+     * Set (or unset) the owning side of the relation if necessary.
+     *
      * @return $this
      */
     public function setUser(?User $user): self
@@ -113,24 +103,17 @@ class Profile
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLastname(): ?string
     {
         return $this->lastname;
     }
 
     /**
-     * @param string $lastname
      * @return $this
      */
     public function setLastname(string $lastname): self
@@ -140,16 +123,12 @@ class Profile
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function isDeveloper(): ?bool
     {
         return $this->developer;
     }
 
     /**
-     * @param bool|null $developer
      * @return $this
      */
     public function setDeveloper(?bool $developer): self
@@ -159,16 +138,12 @@ class Profile
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function isHr(): ?bool
     {
         return $this->hr;
     }
 
     /**
-     * @param bool|null $hr
      * @return $this
      */
     public function setHr(?bool $hr): self
@@ -187,7 +162,6 @@ class Profile
     }
 
     /**
-     * @param Skill $skill
      * @return $this
      */
     public function addSkill(Skill $skill): self
@@ -200,7 +174,6 @@ class Profile
     }
 
     /**
-     * @param Skill $skill
      * @return $this
      */
     public function removeSkill(Skill $skill): self
@@ -212,16 +185,12 @@ class Profile
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string|null $title
      * @return $this
      */
     public function setTitle(?string $title): self

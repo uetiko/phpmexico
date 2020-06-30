@@ -125,24 +125,17 @@ class User implements UserInterface
         $this->contacts = new ArrayCollection();
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
     /**
-     * @param string $username
      * @return $this
      */
     public function setUsername(string $username): self
@@ -152,16 +145,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
     /**
-     * @param string $email
      * @return $this
      */
     public function setEmail(string $email): self
@@ -171,16 +160,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSlackId(): ?string
     {
         return $this->slack_id;
     }
 
     /**
-     * @param string|null $slack_id
      * @return $this
      */
     public function setSlackId(?string $slack_id): self
@@ -190,16 +175,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getSlack(): ?bool
     {
         return $this->slack;
     }
 
     /**
-     * @param bool|null $slack
      * @return $this
      */
     public function setSlack(?bool $slack): self
@@ -209,16 +190,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getNewsletter(): ?bool
     {
         return $this->newsletter;
     }
 
     /**
-     * @param bool|null $newsletter
      * @return $this
      */
     public function setNewsletter(?bool $newsletter): self
@@ -228,16 +205,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return Profile|null
-     */
     public function getProfile(): ?Profile
     {
         return $this->profile;
     }
 
     /**
-     * @param Profile|null $profile
      * @return $this
      */
     public function setProfile(?Profile $profile): self
@@ -247,24 +220,17 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->username;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLoginToken(): ?string
     {
         return $this->login_token;
     }
 
     /**
-     * @param string|null $login_token
      * @return $this
      */
     public function setLoginToken(?string $login_token): self
@@ -306,7 +272,6 @@ class User implements UserInterface
     }
 
     /**
-     * @param Job $job
      * @return $this
      */
     public function addJob(Job $job): self
@@ -320,8 +285,8 @@ class User implements UserInterface
     }
 
     /**
-     * set the owning side to null (unless already changed)
-     * @param Job $job
+     * set the owning side to null (unless already changed).
+     *
      * @return $this
      */
     public function removeJob(Job $job): self
@@ -336,16 +301,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
     public function getLastLogin(): ?DateTimeInterface
     {
         return $this->last_login;
     }
 
     /**
-     * @param DateTimeInterface $last_login
      * @return $this
      */
     public function setLastLogin(DateTimeInterface $last_login): self
@@ -355,16 +316,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMobile(): ?string
     {
         return $this->mobile;
     }
 
     /**
-     * @param string|null $mobile
      * @return $this
      */
     public function setMobile(?string $mobile): self
@@ -374,16 +331,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTshirtSize(): ?string
     {
         return $this->tshirt_size;
     }
 
     /**
-     * @param string|null $tshirt_size
      * @return $this
      */
     public function setTshirtSize(?string $tshirt_size): self
@@ -393,16 +346,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCountry(): ?string
     {
         return $this->country;
     }
 
     /**
-     * @param string|null $country
      * @return $this
      */
     public function setCountry(?string $country): self
@@ -412,16 +361,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSalaryExpectation(): ?string
     {
         return $this->salary_expectation;
     }
 
     /**
-     * @param string|null $salary_expectation
      * @return $this
      */
     public function setSalaryExpectation(?string $salary_expectation): self
@@ -431,16 +376,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getOfferts(): ?bool
     {
         return $this->offerts;
     }
 
     /**
-     * @param bool|null $offerts
      * @return $this
      */
     public function setOfferts(?bool $offerts): self
@@ -459,7 +400,6 @@ class User implements UserInterface
     }
 
     /**
-     * @param Contact $contact
      * @return $this
      */
     public function addContact(Contact $contact): self
@@ -473,8 +413,8 @@ class User implements UserInterface
     }
 
     /**
-     * set the owning side to null (unless already changed)
-     * @param Contact $contact
+     * set the owning side to null (unless already changed).
+     *
      * @return $this
      */
     public function removeContact(Contact $contact): self
@@ -489,16 +429,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
     public function getSlackLastActivity(): ?DateTimeInterface
     {
         return $this->slack_last_activity;
     }
 
     /**
-     * @param DateTimeInterface|null $slack_last_activity
      * @return $this
      */
     public function setSlackLastActivity(?DateTimeInterface $slack_last_activity): self
@@ -508,16 +444,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCity(): ?string
     {
         return $this->city;
     }
 
     /**
-     * @param string|null $city
      * @return $this
      */
     public function setCity(?string $city): self
@@ -528,7 +460,6 @@ class User implements UserInterface
     }
 
     /**
-     * @param array|null $roles
      * @return $this
      */
     public function setRoles(?array $roles): self

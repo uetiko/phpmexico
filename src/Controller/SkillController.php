@@ -7,14 +7,13 @@ namespace App\Controller;
 use App\Entity\Skill;
 use App\Repository\ProfileRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class SkillController extends AbstractController
 {
     /**
      * @Route("/skill", name="skill", options={"sitemap"=true} )
-     * @return Response
      */
     public function index(): Response
     {
@@ -25,9 +24,6 @@ class SkillController extends AbstractController
 
     /**
      * @Route("/skill/{slug}", name="skill_slug")
-     * @param Skill $skill
-     * @param ProfileRepository $profileRepository
-     * @return Response
      */
     public function bySlug(Skill $skill, ProfileRepository $profileRepository): Response
     {

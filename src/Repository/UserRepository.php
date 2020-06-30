@@ -6,8 +6,8 @@ namespace App\Repository;
 
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
-use \Doctrine\ORM\NonUniqueResultException;
 
 /**
  * @method User|null find($id, $lockMode = null, $lockVersion = null)
@@ -23,8 +23,8 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param string $token
      * @return int|mixed|string|null
+     *
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function findByToke(string $token)
@@ -37,8 +37,6 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param string $email
-     * @return User|null
      * @throws NonUniqueResultException
      */
     public function findByEmail(string $email): ? User

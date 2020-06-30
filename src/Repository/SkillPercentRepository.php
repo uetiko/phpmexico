@@ -20,5 +20,4 @@ class SkillPercentRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, SkillPercent::class);
     }
-
 }

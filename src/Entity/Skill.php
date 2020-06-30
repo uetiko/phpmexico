@@ -57,24 +57,17 @@ class Skill
         $this->profiles = new ArrayCollection();
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
      * @return $this
      */
     public function setName(string $name): self
@@ -105,7 +98,6 @@ class Skill
     }
 
     /**
-     * @param Profile $profile
      * @return $this
      */
     public function addProfile(Profile $profile): self
@@ -119,7 +111,6 @@ class Skill
     }
 
     /**
-     * @param Profile $profile
      * @return $this
      */
     public function removeProfile(Profile $profile): self
@@ -132,24 +123,17 @@ class Skill
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
     /**
-     * @param string|null $description
      * @return $this
      */
     public function setDescription(?string $description): self
@@ -159,16 +143,12 @@ class Skill
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSlug(): ?string
     {
         return $this->slug;
     }
 
     /**
-     * @param string $slug
      * @return $this
      */
     public function setSlug(string $slug): self
@@ -178,16 +158,12 @@ class Skill
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getImageUrl(): ?string
     {
         return $this->image_url;
     }
 
     /**
-     * @param string|null $image_url
      * @return $this
      */
     public function setImageUrl(?string $image_url): self

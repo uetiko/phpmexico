@@ -8,25 +8,23 @@ use App\Entity\User;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Doctrine\ORM\Events;
-use Twig\Environment;
 use Swift_Mailer;
 use Swift_Message;
-use \Twig\Error\LoaderError;
-use \Twig\Error\RuntimeError;
-use \Twig\Error\SyntaxError;
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 class SendLoginEmail implements EventSubscriber
 {
-    /** @var Swift_Mailer $mailer */
+    /** @var Swift_Mailer */
     protected $mailer;
 
-    /** @var Environment $twig */
+    /** @var Environment */
     protected $twig;
 
     /**
      * SendLoginEmail constructor.
-     * @param Swift_Mailer $mailer
-     * @param Environment $twig
      */
     public function __construct(Swift_Mailer $mailer, Environment $twig)
     {
@@ -45,9 +43,6 @@ class SendLoginEmail implements EventSubscriber
         ];
     }
 
-    /**
-     * @param LifecycleEventArgs $args
-     */
     public function postUpdate(LifecycleEventArgs $args)
     {
         $user = $args->getObject();
@@ -63,9 +58,6 @@ class SendLoginEmail implements EventSubscriber
         }
     }
 
-    /**
-     * @param LifecycleEventArgs $args
-     */
     public function postPersist(LifecycleEventArgs $args)
     {
         $isUser = $args->getObject();
@@ -81,10 +73,6 @@ class SendLoginEmail implements EventSubscriber
             ));
     }
 
-    /**
-     * @param LifecycleEventArgs $args
-     * @return User
-     */
     private function login(LifecycleEventArgs $args): User
     {
         /** @var User $user */
@@ -102,9 +90,6 @@ class SendLoginEmail implements EventSubscriber
     }
 
     /**
-     * @param User $user
-     * @param string $template
-     * @return Swift_Message
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError

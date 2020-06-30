@@ -25,7 +25,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
     }
 
     /**
-     * @param Request $request
      * @return bool|mixed|null
      */
     public function supports(Request $request)
@@ -33,10 +32,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
         return $request->query->get('token', false);
     }
 
-    /**
-     * @param Request $request
-     * @return array
-     */
     public function getCredentials(Request $request): array
     {
         return [
@@ -46,7 +41,7 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
 
     /**
      * @param mixed $credentials
-     * @param UserProviderInterface $userProvider
+     *
      * @return bool|UserInterface|null
      */
     public function getUser($credentials, UserProviderInterface $userProvider)
@@ -65,8 +60,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
 
     /**
      * @param mixed $credentials
-     * @param UserInterface $user
-     * @return bool
      */
     public function checkCredentials($credentials, UserInterface $user): bool
     {
@@ -74,8 +67,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
     }
 
     /**
-     * @param Request $request
-     * @param AuthenticationException $exception
      * @return RedirectResponse|Response|null
      */
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
@@ -84,9 +75,8 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
     }
 
     /**
-     * @param Request $request
-     * @param TokenInterface $token
      * @param string $providerKey
+     *
      * @return RedirectResponse|Response|null
      */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
@@ -101,8 +91,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
     }
 
     /**
-     * @param Request $request
-     * @param AuthenticationException|null $authException
      * @return RedirectResponse|Response
      */
     public function start(Request $request, AuthenticationException $authException = null)
@@ -110,9 +98,6 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
         return new RedirectResponse('/login');
     }
 
-    /**
-     * @return bool
-     */
     public function supportsRememberMe(): bool
     {
         return false;

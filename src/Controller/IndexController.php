@@ -17,8 +17,8 @@ use Psr\Log\LoggerInterface;
 use ReCaptcha\ReCaptcha;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
@@ -37,9 +37,6 @@ class IndexController extends AbstractController
 
     /**
      * @Route("/", name="index")
-     * @param Request $request
-     * @param SkillRepository $skillRepository
-     * @return Response
      */
     public function index(Request $request, SkillRepository $skillRepository): Response
     {
@@ -72,9 +69,6 @@ class IndexController extends AbstractController
 
     /**
      * @Route("/login", name="login")
-     * @param Request $request
-     * @param ReCaptcha $reCaptcha
-     * @return Response
      */
     public function login(Request $request, ReCaptcha $reCaptcha): Response
     {
@@ -115,9 +109,6 @@ class IndexController extends AbstractController
         ]);
     }
 
-    /**
-     * @param string $email
-     */
     private function inviteUser(string $email)
     {
         try {

@@ -41,24 +41,17 @@ class SkillGroup
         $this->skills = new ArrayCollection();
     }
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
      * @return $this
      */
     public function setName(string $name): self
@@ -77,7 +70,6 @@ class SkillGroup
     }
 
     /**
-     * @param Skill $skill
      * @return $this
      */
     public function addSkill(Skill $skill): self
@@ -91,7 +83,6 @@ class SkillGroup
     }
 
     /**
-     * @param Skill $skill
      * @return $this
      */
     public function removeSkill(Skill $skill): self
@@ -107,24 +98,17 @@ class SkillGroup
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return bool|null
-     */
     public function getFrontpage(): ?bool
     {
         return $this->frontpage;
     }
 
     /**
-     * @param bool $frontpage
      * @return $this
      */
     public function setFrontpage(bool $frontpage): self

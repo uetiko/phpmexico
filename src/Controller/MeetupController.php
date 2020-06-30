@@ -8,16 +8,14 @@ use DMS\Service\Meetup\MeetupKeyAuthClient;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class MeetupController extends AbstractController
 {
     /**
      * @Route("/meetup", name="meetup")
-     * @param CacheItemPoolInterface $cache
-     * @param MeetupKeyAuthClient $client
-     * @return Response
+     *
      * @throws InvalidArgumentException
      */
     public function index(CacheItemPoolInterface $cache, MeetupKeyAuthClient $client): Response

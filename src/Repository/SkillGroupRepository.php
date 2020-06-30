@@ -23,7 +23,6 @@ class SkillGroupRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param User $user
      * @return int|mixed|string
      */
     public function findByUser(User $user)
